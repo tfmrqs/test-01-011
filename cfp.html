@@ -775,7 +775,10 @@
   <aside class="sidebar-drawer" id="sidebarDrawer">
     <div class="sidebar-header">
       <h2>📋 Itens Selecionados (<span id="sidebarCount">0</span>)</h2>
-      <button class="btn-close-sidebar" onclick="toggleSidebar(false)">✕</button>
+      <div style="display: flex; gap: 0.5rem; align-items: center;">
+        <button class="btn-close-sidebar" title="Limpar carrinho" onclick="if(confirm('Deseja limpar todo o carrinho?')){localStorage.removeItem('enxoval_pmdf_cfp_state');location.reload();}">🗑️</button>
+        <button class="btn-close-sidebar" onclick="toggleSidebar(false)">✕</button>
+      </div>
     </div>
 
     <div class="sidebar-content" id="sidebarItemsList">
